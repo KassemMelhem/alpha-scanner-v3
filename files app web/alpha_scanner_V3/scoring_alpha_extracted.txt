@@ -1,0 +1,102 @@
+
+PROJET ALPHA
+Méthodologie du module de scoring fondamental
+1. Objectif du module
+Le module fondamental répond à une question précise et limitée : cette entreprise possède-t-elle des fondamentaux suffisamment solides pour limiter le risque de perte permanente de capital ? Il ne s'agit pas d'un score de qualité générale, mais d'un filtre calibré sur l'usage spécifique de la stratégie Alpha, qui recherche des actifs à « volatilité saine » plutôt que spéculative.
+Le score composite produit par ce module sert de filtre de premier niveau. Il n'est volontairement pas destiné à être utilisé directement comme variable d'entrée du futur moteur de probabilité : les variables brutes sous-jacentes sont conservées séparément (voir section 5) afin que le modèle de probabilité puisse apprendre lui-même leur poids relatif, plutôt que d'hériter d'une pondération fixée arbitrairement en amont.
+2. Les cinq sous-scores
+Chaque sous-score est calculé à partir de variables brutes normalisées sur une échelle de 0 à 100, puis agrégé en un score composite pondéré. Les cinq dimensions retenues sont les suivantes.
+2.1 Croissance
+Mesure la dynamique de développement de l'entreprise à partir de la croissance du chiffre d'affaires (glissement annuel et taux de croissance annuel composé sur 3 ans) et de la croissance du bénéfice par action.
+score = ((valeur − seuil_bas) / (seuil_haut − seuil_bas)) × 100, écrêté entre 0 et 100
+EXEMPLE Croissance (moyenne de 3 composantes)
+Croissance CA YoY : seuil bas −5%, seuil haut +30%
+CAGR CA 3 ans : seuil bas 0%, seuil haut +25%
+Croissance EPS YoY : seuil bas −10%, seuil haut +35%
+Exemple sur action Palantir : CA YoY = 27%, CAGR 3 ans = 22%, EPS YoY = 40%
+CA YoY : (0,27 − (−0,05)) / (0,30 − (−0,05)) × 100 = 91,4
+CAGR : (0,22 − 0) / (0,25 − 0) × 100 = 88,0
+EPS : (0,40 − (−0,10)) / (0,35 − (−0,10)) × 100 = 111,1 → écrêté à 100
+Score croissance = (91,4 + 88,0 + 100) / 3 = 93,1
+2.2 Rentabilité
+Combine les marges brute et opérationnelle, le ROE, et surtout le spread entre le ROIC et le coût du capital (WACC) estimé. Ce spread est le signal le plus pertinent de création de valeur économique réelle : un ROIC élevé n'a de sens que rapporté au coût du capital engagé pour l'obtenir.
+EXEMPLE Rentabilité (moyenne de 4 composantes)
+Marge brute : seuil bas 10%, haut 70%
+Marge opérationnelle : seuil bas 0%, haut 35%
+ROE : seuil bas 0%, haut 30%
+Spread ROIC−WACC : seuil bas −5%, haut +15%
+Exemple : marge brute 80%, marge op. 15%, ROE 12%, ROIC 10%, WACC 9% (spread = 1%)
+Marge brute : (0,80−0,10)/(0,70−0,10)×100 = 116,7 → écrêté à 100
+Marge op. : (0,15−0)/(0,35−0)×100 = 42,9
+ROE : (0,12−0)/(0,30−0)×100 = 40,0
+Spread : (0,01−(−0,05))/(0,15−(−0,05))×100 = 30,0
+Score rentabilité = (100 + 42,9 + 40,0 + 30,0) / 4 = 53,2
+2.3 Solidité bilancielle
+Évalue le risque financier via la dette nette rapportée à l'EBITDA, la couverture des charges financières par le résultat d'exploitation, et le ratio de liquidité générale. Ces trois variables sont normalisées de façon inversée : moins d'endettement produit un score plus élevé.
+Solidité bilancielle (moyenne de 3 composantes, logique inversée pour la dette)
+Dette nette/EBITDA : seuil bas −5x, haut 0x, mais on normalise −valeur (donc moins de dette = score plus haut)
+Couverture des intérêts : seuil bas 1x, haut 15x
+Current ratio : seuil bas 0,8, haut 2,5
+Exemple : dette nette/EBITDA = −1,5x (trésorerie nette), couverture = 25x, current ratio = 3,5
+Dette : on normalise (−(−1,5)) = 1,5 → (1,5−(−5))/(0−(−5))×100 = 130 → écrêté à 100
+Couverture : (25−1)/(15−1)×100 = 171,4 → écrêté à 100
+Current ratio : (3,5−0,8)/(2,5−0,8)×100 = 158,8 → écrêté à 100
+Score bilan = (100+100+100)/3 = 100,0
+2.4 Génération de cash
+Vérifie que le résultat comptable se traduit effectivement en trésorerie disponible, via le taux de conversion du résultat net en free cash flow et la marge de FCF. Un résultat net qui ne se convertit pas en cash est un signal d'alerte classique sur la qualité des bénéfices affichés.
+EXEMPLE Génération de cash (moyenne de 2 composantes)
+Conversion FCF/résultat net : seuil bas 0,3, haut 1,3
+Marge de FCF : seuil bas 0%, haut 25%
+Exemple : FCF = 800M€, résultat net = 500M€ (conversion = 1,6), marge FCF = 28%
+Conversion : (1,6−0,3)/(1,3−0,3)×100 = 130 → écrêté à 100
+Marge FCF : (0,28−0)/(0,25−0)×100 = 112 → écrêté à 100
+Score cash = (100+100)/2 = 100,0
+2.5 Proxy de moat (avantage concurrentiel)
+Approche indirecte de l'avantage concurrentiel durable, mesurée par la stabilité de la marge brute dans le temps (écart-type sur un historique de 5 ans) et par la tendance du ROIC. Un avantage concurrentiel réel se traduit par une résistance à l'érosion des marges sous la pression concurrentielle, plutôt que par un niveau de marge élevé à un instant donné.
+Proxy de moat (moyenne de 2 composantes)
+Écart-type de la marge brute sur 5 ans : seuil bas −8%, haut 0% (normalisé négativement — moins de volatilité = mieux)
+Tendance ROIC (dernier − premier) : seuil bas −5%, haut +5%
+Exemple : marges brutes [78%,79%,79%,80%,80%] → écart-type ≈ 0,74% ; ROIC [4%,6%,8%,9%,10%] → tendance = +6%
+Stabilité : (−0,0074−(−0,08))/(0−(−0,08))×100 = 90,8
+Tendance : (0,06−(−0,05))/(0,05−(−0,05))×100 = 110 → écrêté à 100
+Score moat = (90,8+100)/2 = 95,4
+3. Normalisation
+Chaque variable brute est ramenée sur une échelle de 0 à 100 par normalisation linéaire entre un seuil bas (score = 0) et un seuil haut (score = 100), avec écrêtage aux bornes. Les seuils actuels sont des points de départ génériques, définis à partir de références sectorielles usuelles ; ils devront être recalibrés par secteur d'activité une fois qu'un historique de données réel sera disponible, une entreprise financière et une biotech n'ayant ni les mêmes normes de dette, ni les mêmes structures de marge.
+Toute donnée manquante est conservée comme telle (valeur nulle) plutôt que remplacée par une estimation arbitraire. Le score composite se renormalise alors automatiquement sur les seuls sous-scores disponibles, et un indicateur de complétude des données accompagne chaque résultat pour signaler les scores calculés sur une base incomplète.
+4. Score composite et pondération
+Les cinq sous-scores sont agrégés en un score composite unique via une moyenne pondérée. Les pondérations retenues à ce stade sont les suivantes, à titre de point de départ devant être validé par backtesting plutôt que considéré comme définitif :
+Sous-score
+Pondération
+Croissance
+20 %
+Rentabilité
+25 %
+Solidité bilancielle
+25 %
+Génération de cash
+20 %
+Proxy de moat
+10 %
+
+La rentabilité et la solidité bilancielle sont pondérées le plus fortement, car ce sont les deux dimensions les plus directement liées au risque de perte permanente de capital, objectif premier du filtre fondamental.
+Avec notre exemple 
+Score composite final (pondération 20/25/25/20/10) : 0,20×93,1 + 0,25×53,2 + 0,25×100,0 + 0,20×100,0 + 0,10×95,4 = 18,62+13,30+25,00+20,00+9,54 = 86,5/100
+5. Variables brutes conservées
+L'ensemble des variables sous-jacentes à chaque sous-score est conservé intact dans le résultat, indépendamment du score composite calculé. Ce choix de conception est délibéré : ce sont ces variables brutes, et non le score agrégé, qui devront alimenter le futur modèle de probabilité (régression logistique ou gradient boosting), afin que ce modèle apprenne lui-même les pondérations et interactions optimales à partir des données historiques, plutôt que d'hériter d'une pondération fixée manuellement à ce stade.
+Sous-score
+Variables utilisées
+Croissance
+Croissance du CA (YoY et CAGR 3 ans), croissance de l'EPS (YoY)
+Rentabilité
+Marge brute, marge opérationnelle, ROE, spread ROIC – WACC
+Solidité bilancielle
+Dette nette / EBITDA, couverture des intérêts, current ratio
+Génération de cash
+Taux de conversion résultat net → FCF, marge de FCF
+Proxy de moat
+Stabilité de la marge brute (écart-type sur 5 ans), tendance du ROIC
+6. Limites actuelles et prochaines étapes
+Les seuils de normalisation sont génériques et doivent être recalibrés par secteur d'activité à partir de données historiques réelles.
+Le proxy de moat reste une approximation indirecte ; il ne capture pas certains avantages concurrentiels non visibles dans les marges (effets de réseau émergents, brevets non encore monétisés).
+Ce module ne couvre que la dimension fondamentale ; il doit être combiné aux modules valorisation, technique, macro et sentiment avant toute décision, conformément à l'architecture générale du Projet Alpha.
+La validation définitive de la pertinence de ces sous-scores et de leur pondération ne pourra se faire que par backtesting sur données historiques, avec vérification de calibration plutôt que sur la seule performance globale simulée.

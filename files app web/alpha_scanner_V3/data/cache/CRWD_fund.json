@@ -1,0 +1,22 @@
+{
+  "ticker": "CRWD",
+  "short_name": "CrowdStrike Holdings, Inc.",
+  "company_name": "CrowdStrike Holdings, Inc. provides cybersecurity solutions in the United States and internationally. Its unified platfo",
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
+  "revenue_growth_yoy": 0.258,
+  "revenue_cagr_3y": 0.2193,
+  "eps_growth_yoy": null,
+  "gross_margin": 0.75185996,
+  "operating_margin": -0.02259,
+  "roe": 0.01461,
+  "spread_roic_wacc": -0.12951915,
+  "net_debt_ebitda": -39.2441398826513,
+  "interest_coverage": 3.2572462522717966,
+  "current_ratio": 1.57,
+  "fcf_conversion": 1.0,
+  "fcf_margin": 0.36977979942968,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:21"
+}

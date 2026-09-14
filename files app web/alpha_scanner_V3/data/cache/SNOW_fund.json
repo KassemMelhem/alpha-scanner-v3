@@ -1,0 +1,22 @@
+{
+  "ticker": "SNOW",
+  "short_name": "Snowflake Inc.",
+  "company_name": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. ",
+  "sector": "Technology",
+  "industry": "Software - Application",
+  "revenue_growth_yoy": 0.351,
+  "revenue_cagr_3y": 0.29834999999999995,
+  "eps_growth_yoy": null,
+  "gross_margin": 0.6703,
+  "operating_margin": -0.17001,
+  "roe": -0.48063,
+  "spread_roic_wacc": -0.30786185,
+  "net_debt_ebitda": -0.40444460282215494,
+  "interest_coverage": 0.5,
+  "current_ratio": 0.939,
+  "fcf_conversion": 1.0,
+  "fcf_margin": 0.32008088900654713,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:22"
+}

@@ -1,0 +1,22 @@
+{
+  "ticker": "AMD",
+  "short_name": "Advanced Micro Devices, Inc.",
+  "company_name": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Ce",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "revenue_growth_yoy": 0.501,
+  "revenue_cagr_3y": 0.42585,
+  "eps_growth_yoy": 1.634,
+  "gross_margin": 0.55724,
+  "operating_margin": 0.1725,
+  "roe": 0.10196,
+  "spread_roic_wacc": 0.040612499999999996,
+  "net_debt_ebitda": -0.9239698503655697,
+  "interest_coverage": 30.0,
+  "current_ratio": 2.609,
+  "fcf_conversion": 1.5707500995606174,
+  "fcf_margin": 0.21405396981762315,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:21"
+}

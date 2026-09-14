@@ -1,0 +1,22 @@
+{
+  "ticker": "MSFT",
+  "short_name": "Microsoft Corporation",
+  "company_name": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals a",
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
+  "revenue_growth_yoy": 0.177,
+  "revenue_cagr_3y": 0.15045,
+  "eps_growth_yoy": 0.313,
+  "gross_margin": 0.67944,
+  "operating_margin": 0.45111,
+  "roe": 0.34039003,
+  "spread_roic_wacc": 0.43916535,
+  "net_debt_ebitda": 0.26755971977394727,
+  "interest_coverage": 30.0,
+  "current_ratio": 1.23,
+  "fcf_conversion": 0.13990811702464417,
+  "fcf_margin": 0.049860021030079915,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:18"
+}

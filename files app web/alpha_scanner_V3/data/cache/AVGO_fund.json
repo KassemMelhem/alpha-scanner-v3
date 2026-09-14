@@ -1,0 +1,22 @@
+{
+  "ticker": "AVGO",
+  "short_name": "Broadcom Inc.",
+  "company_name": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions intern",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "revenue_growth_yoy": 0.855,
+  "revenue_cagr_3y": 0.72675,
+  "eps_growth_yoy": 2.161,
+  "gross_margin": 0.75515,
+  "operating_margin": 0.54307,
+  "roe": 0.44245,
+  "spread_roic_wacc": 0.53068795,
+  "net_debt_ebitda": 0.6782242813169808,
+  "interest_coverage": 21.98791590747158,
+  "current_ratio": 2.504,
+  "fcf_conversion": 0.8003715494098336,
+  "fcf_margin": 0.3433796440970187,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:21"
+}

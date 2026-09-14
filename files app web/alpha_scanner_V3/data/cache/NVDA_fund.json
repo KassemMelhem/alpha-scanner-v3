@@ -1,0 +1,21 @@
+{
+  "ticker": "NVDA",
+  "company_name": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, T",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "revenue_growth_yoy": 1.059,
+  "revenue_cagr_3y": 0.9001499999999999,
+  "eps_growth_yoy": 1.259,
+  "gross_margin": 0.74674004,
+  "operating_margin": 0.66236997,
+  "roe": 1.17211,
+  "spread_roic_wacc": 0.6340584144499999,
+  "net_debt_ebitda": -0.11730247270052462,
+  "interest_coverage": 30.0,
+  "current_ratio": 4.589,
+  "fcf_conversion": 0.2637251203049432,
+  "fcf_margin": 0.13800004401945898,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:09:05"
+}

@@ -1,0 +1,22 @@
+{
+  "ticker": "SAP.DE",
+  "short_name": "SAP SE                        I",
+  "company_name": "SAP SE, together with its subsidiaries, provides enterprise application and business solutions worldwide. It offers SAP ",
+  "sector": "Technology",
+  "industry": "Software - Application",
+  "revenue_growth_yoy": 0.094,
+  "revenue_cagr_3y": 0.0799,
+  "eps_growth_yoy": 0.285,
+  "gross_margin": 0.73658997,
+  "operating_margin": 0.2762,
+  "roe": 0.18320999,
+  "spread_roic_wacc": 0.248547,
+  "net_debt_ebitda": -0.14336731428571428,
+  "interest_coverage": 29.580439735814394,
+  "current_ratio": 1.148,
+  "fcf_conversion": 1.0908638269206332,
+  "fcf_margin": 0.23802430530642835,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:24"
+}

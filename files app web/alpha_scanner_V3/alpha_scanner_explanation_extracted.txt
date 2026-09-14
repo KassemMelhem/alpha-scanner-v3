@@ -1,0 +1,44 @@
+
+Alpha Scanner V4 - Explication Complète
+1. Objectif du projet
+Ce programme analyse des actions en combinant :- Les actualités (news)- Les prix du marché- Un score final appelé Alpha Score
+2. Lexique
+Sentiment : mesure si les news sont positives ou négatives.Momentum : vitesse de variation du prix.Scoring : système de notation pour classer les actions.Alpha Score : score final combinant momentum + sentiment.
+3. config.py
+Contient les paramètres globaux :- WATCHLIST : liste des actions- NEWS_API_KEY : clé API pour les news
+4. news_provider.py
+Récupère les actualités via une API.Logique : envoyer une requête → recevoir des news → retourner une liste.
+5. sentiment.py
+Analyse les textes des news.Logique : détecter mots positifs/négatifs → produire un score.
+6. market_provider.py
+Récupère les prix via yfinance.Logique : télécharger les données historiques du marché.
+7. indicators.py
+Calcule le momentum.Logique : comparer prix actuel vs prix passé.
+8. scoring.py
+Combine les scores.Logique : ajouter momentum + sentiment avec pondération.
+9. main.py
+Orchestre tout :1. boucle sur chaque action2. récupère news + prix3. calcule scores4. classe les résultats
+
+
+
+NB : Création de la clé API sur NewsAPI
+(https://newsapi.org/?utm_source=chatgpt.com)
+
+Key : ff86e53f592f4d1eb7322d9e2875f1cb
+
+
+
+
+
+
+
+1. Sentiment (News)
+Le sentiment est calculé à partir des actualités liées à une action.Un score positif indique des bonnes nouvelles (croissance, résultats positifs), un score négatif indique des mauvaises nouvelles (scandales, pertes).Exemple:+0.25 → positif-0.30 → négatif0 → neutre
+2. Momentum (Prix)
+Le momentum combine plusieurs signaux techniques:- Trend: prix au-dessus de la moyenne mobile (SMA20)- Momentum court terme: variation sur 5 jours- Breakout: nouveau plus haut sur 20 jours- Volume spike: augmentation du volumeFormule:momentum = trend*0.3 + momentum_5d*5 + breakout*0.3 + (volume_spike-1)*0.2
+3. Alpha Score
+L’alpha score combine le momentum et le sentiment:alpha_score = momentum*0.7 + sentiment*0.3Le prix a plus d’importance que les news.
+4. Signal (BUY / SELL / HOLD)
+Le signal est déterminé à partir du alpha score:alpha_score > 1 → BUYalpha_score < -1 → SELL-1 ≤ alpha_score ≤ 1 → HOLD
+Exemple complet
+Ticker: NVDASentiment: 0.25Momentum: 1.40Calcul:alpha_score = 1.40*0.7 + 0.25*0.3 = 1.05Signal: BUY

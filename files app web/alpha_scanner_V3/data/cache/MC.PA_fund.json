@@ -1,0 +1,22 @@
+{
+  "ticker": "MC.PA",
+  "short_name": "LVMH",
+  "company_name": "LVMH Mo\u00ebt Hennessy - Louis Vuitton, Soci\u00e9t\u00e9 Europ\u00e9enne, together with its subsidiaries, operates as a luxury goods compa",
+  "sector": "Consumer Cyclical",
+  "industry": "Luxury Goods",
+  "revenue_growth_yoy": -0.029,
+  "revenue_cagr_3y": -0.024650000000000002,
+  "eps_growth_yoy": -0.0,
+  "gross_margin": 0.66365,
+  "operating_margin": 0.22521,
+  "roe": 0.16586,
+  "spread_roic_wacc": 0.18502385000000002,
+  "net_debt_ebitda": 1.243492539618088,
+  "interest_coverage": 13.494926388644494,
+  "current_ratio": 1.631,
+  "fcf_conversion": 0.8142281911964624,
+  "fcf_margin": 0.14486414144209067,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:10:21"
+}
