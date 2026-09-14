@@ -1,0 +1,22 @@
+{
+  "ticker": "GOOGL",
+  "short_name": "Alphabet Inc.",
+  "company_name": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Paci",
+  "sector": "Communication Services",
+  "industry": "Internet Content & Information",
+  "revenue_growth_yoy": 0.242,
+  "revenue_cagr_3y": 0.2057,
+  "eps_growth_yoy": 2.979,
+  "gross_margin": 0.60897,
+  "operating_margin": 0.34033,
+  "roe": 0.48676,
+  "spread_roic_wacc": 0.30204105,
+  "net_debt_ebitda": -0.7027037421946938,
+  "interest_coverage": 30.0,
+  "current_ratio": 2.724,
+  "fcf_conversion": 0.18907063219146653,
+  "fcf_margin": 0.05083366252044022,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:18"
+}

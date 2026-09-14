@@ -1,0 +1,22 @@
+{
+  "ticker": "AIR.PA",
+  "short_name": "AIRBUS SE",
+  "company_name": "Airbus SE, together with its subsidiaries, engages in the design, manufacture, and delivery of aeronautics and aerospace",
+  "sector": "Industrials",
+  "industry": "Aerospace & Defense",
+  "revenue_growth_yoy": 0.277,
+  "revenue_cagr_3y": 0.23545000000000002,
+  "eps_growth_yoy": 1.264,
+  "gross_margin": 0.16309,
+  "operating_margin": 0.113570005,
+  "roe": 0.23193,
+  "spread_roic_wacc": 0.050680455925000006,
+  "net_debt_ebitda": 0.12738780268644187,
+  "interest_coverage": 15.767722782049386,
+  "current_ratio": 1.146,
+  "fcf_conversion": 0.45296890061461514,
+  "fcf_margin": 0.04064050744304062,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:23"
+}

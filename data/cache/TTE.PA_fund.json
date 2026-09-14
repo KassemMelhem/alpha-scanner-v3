@@ -1,0 +1,22 @@
+{
+  "ticker": "TTE.PA",
+  "short_name": "TOTALENERGIES",
+  "company_name": "TotalEnergies SE, an integrated energy company, produces and markets oil and biofuels, natural gas, biogas and low-carbo",
+  "sector": "Energy",
+  "industry": "Oil & Gas Integrated",
+  "revenue_growth_yoy": 0.278,
+  "revenue_cagr_3y": 0.2363,
+  "eps_growth_yoy": 1.024,
+  "gross_margin": 0.37682,
+  "operating_margin": 0.12788999,
+  "roe": 0.14479999,
+  "spread_roic_wacc": 0.10854963815000002,
+  "net_debt_ebitda": 0.7868852797717727,
+  "interest_coverage": 15.754883469365382,
+  "current_ratio": 1.061,
+  "fcf_conversion": 0.681987783995044,
+  "fcf_margin": 0.0689033345914462,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:23"
+}

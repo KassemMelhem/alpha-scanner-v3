@@ -1,0 +1,22 @@
+{
+  "ticker": "TSLA",
+  "short_name": "Tesla, Inc.",
+  "company_name": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage syst",
+  "sector": "Consumer Cyclical",
+  "industry": "Auto Manufacturers",
+  "revenue_growth_yoy": 0.255,
+  "revenue_cagr_3y": 0.21675,
+  "eps_growth_yoy": -0.049,
+  "gross_margin": 0.18852,
+  "operating_margin": 0.014099999,
+  "roe": 0.046669997,
+  "spread_roic_wacc": -0.115541501185,
+  "net_debt_ebitda": -2.551743465870952,
+  "interest_coverage": 16.721082587064675,
+  "current_ratio": 1.941,
+  "fcf_conversion": 4.189871362173613,
+  "fcf_margin": 0.046670973793253495,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:20"
+}

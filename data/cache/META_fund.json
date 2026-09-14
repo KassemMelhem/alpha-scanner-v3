@@ -1,0 +1,22 @@
+{
+  "ticker": "META",
+  "short_name": "Meta Platforms, Inc.",
+  "company_name": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and fam",
+  "sector": "Communication Services",
+  "industry": "Internet Content & Information",
+  "revenue_growth_yoy": 0.28,
+  "revenue_cagr_3y": 0.23800000000000002,
+  "eps_growth_yoy": -0.136,
+  "gross_margin": 0.81747,
+  "operating_margin": 0.34827,
+  "roe": 0.29848,
+  "spread_roic_wacc": 0.31054995,
+  "net_debt_ebitda": 0.20115818318464143,
+  "interest_coverage": 24.40726373203747,
+  "current_ratio": 2.226,
+  "fcf_conversion": 0.34321961411188623,
+  "fcf_margin": 0.09443114505532983,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:19"
+}

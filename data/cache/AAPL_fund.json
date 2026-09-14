@@ -1,0 +1,22 @@
+{
+  "ticker": "AAPL",
+  "short_name": "Apple Inc.",
+  "company_name": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories world",
+  "sector": "Technology",
+  "industry": "Consumer Electronics",
+  "revenue_growth_yoy": 0.164,
+  "revenue_cagr_3y": 0.1394,
+  "eps_growth_yoy": 0.271,
+  "gross_margin": 0.48653,
+  "operating_margin": 0.32623002,
+  "roe": 1.4875101,
+  "spread_roic_wacc": 0.29233257370000004,
+  "net_debt_ebitda": 0.13065685929459028,
+  "interest_coverage": 30.0,
+  "current_ratio": 1.003,
+  "fcf_conversion": 0.8953661222058225,
+  "fcf_margin": 0.23075529328407707,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:10:20"
+}

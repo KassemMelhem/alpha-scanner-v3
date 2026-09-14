@@ -1,0 +1,22 @@
+{
+  "ticker": "AMZN",
+  "short_name": "Amazon.com, Inc.",
+  "company_name": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online ",
+  "sector": "Consumer Cyclical",
+  "industry": "Internet Retail",
+  "revenue_growth_yoy": 0.196,
+  "revenue_cagr_3y": 0.1666,
+  "eps_growth_yoy": 2.449,
+  "gross_margin": 0.5077,
+  "operating_margin": 0.13689,
+  "roe": 0.30558002,
+  "spread_roic_wacc": 0.050064650000000016,
+  "net_debt_ebitda": 0.7616214837282254,
+  "interest_coverage": 16.781448313392474,
+  "current_ratio": 1.033,
+  "fcf_conversion": 0.03837570905138907,
+  "fcf_margin": 0.004150068141515273,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:19"
+}

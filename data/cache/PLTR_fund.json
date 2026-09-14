@@ -1,0 +1,22 @@
+{
+  "ticker": "PLTR",
+  "short_name": "Palantir Technologies Inc.",
+  "company_name": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterr",
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
+  "revenue_growth_yoy": 0.928,
+  "revenue_cagr_3y": 0.7888000000000001,
+  "eps_growth_yoy": 2.25,
+  "gross_margin": 0.84796,
+  "operating_margin": 0.47120997,
+  "roe": 0.38097,
+  "spread_roic_wacc": 0.43733381444999997,
+  "net_debt_ebitda": -3.454366223954893,
+  "interest_coverage": 30.0,
+  "current_ratio": 7.228,
+  "fcf_conversion": 0.942188206204719,
+  "fcf_margin": 0.3507350963402627,
+  "gross_margin_std_5y": 0.015,
+  "roic_trend": 0.02,
+  "updated_at": "2026-09-14 15:11:20"
+}
