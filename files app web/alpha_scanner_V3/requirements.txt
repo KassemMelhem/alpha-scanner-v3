@@ -1,7 +1,6 @@
 pandas
-numpy
+numpy<2
 requests
-streamlit
 plotly
-ta
-python-dotenv
+yfinance
+beautifulsoup4
